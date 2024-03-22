@@ -12,7 +12,7 @@ COPY ["wetherforecastapi.csproj", "wetherforecastapi/"]
 RUN dotnet restore "./wetherforecastapi/./wetherforecastapi.csproj"
 COPY . .
 WORKDIR "/src/wetherforecastapi"
-RUN dotnet build "./wetherforecastapi.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "wetherforecastapi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
