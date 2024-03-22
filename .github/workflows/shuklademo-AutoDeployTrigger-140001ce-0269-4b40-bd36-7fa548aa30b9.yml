@@ -7,7 +7,7 @@ on:
     branches: 
       [ main ]
     paths:
-    - '"./wetherforecastapi/Dockerfile"/**'
+    - '"/wetherforecastapi/Dockerfile"/**'
     - '.github/workflows/shuklademo-AutoDeployTrigger-140001ce-0269-4b40-bd36-7fa548aa30b9.yml'
 
   # Allow manual trigger 
