@@ -7,7 +7,7 @@ on:
     branches: 
       [ main ]
     paths:
-    - '"/Dockerfile"/**'
+    - '"wetherforecastapi/Dockerfile"/**'
     - '.github/workflows/shuklademo-AutoDeployTrigger-140001ce-0269-4b40-bd36-7fa548aa30b9.yml'
 
   # Allow manual trigger 
@@ -29,7 +29,7 @@ jobs:
       - name: Build and push container image to registry
         uses: azure/container-apps-deploy-action@v2
         with:
-          appSourcePath: ${{ github.workspace }}"/Dockerfile" 
+          appSourcePath: ${{ github.workspace }}"wetherforecastapi/Dockerfile" 
           registryUrl: tinkushuklaregistry.azurecr.io
           registryUsername: ${{ secrets.SHUKLADEMO_REGISTRY_USERNAME }}
           registryPassword: ${{ secrets.SHUKLADEMO_REGISTRY_PASSWORD }}
