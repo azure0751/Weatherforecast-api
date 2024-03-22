@@ -8,7 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Weatherforecast-api/wetherforecastapi/wetherforecastapi.csproj", "wetherforecastapi/"]
+COPY ["/wetherforecastapi/wetherforecastapi.csproj", "wetherforecastapi/"]
 RUN dotnet restore "./wetherforecastapi/./wetherforecastapi.csproj"
 COPY . .
 WORKDIR "/src/wetherforecastapi"
